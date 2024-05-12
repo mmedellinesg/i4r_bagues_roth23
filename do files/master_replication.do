@@ -17,7 +17,7 @@ version 14
 
 ** Adjust the following path to your own directory in which you store the folder "ReplicationFiles"
 
-global path "/Users/manuelbagues/Dropbox/research/project with chris/replication files"
+global path `c(pwd)'
 
 
 cap log close
