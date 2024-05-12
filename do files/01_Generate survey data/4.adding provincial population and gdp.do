@@ -20,6 +20,7 @@ replace year=year[_n-1]+1 if new==1
 
 gen imputation=poblacion if new==0
 
+* Replicator's note: This procedure artificially assumes that the value of population for the year after the last available in the data is zero. It does not impact the final results because the last relevant year is prior to 1999.
 replace imputation=poblacion[_n-1]+(poblacion[_n+4]-poblacion[_n-1])*.2 if new==1 & new[_n-1]==0
 replace imputation=poblacion[_n-2]+(poblacion[_n+3]-poblacion[_n-2])*.4 if new==1 & new[_n-2]==0
 replace imputation=poblacion[_n-3]+(poblacion[_n+2]-poblacion[_n-3])*.6 if new==1 & new[_n-3]==0
@@ -51,6 +52,7 @@ replace year=year[_n-1]+1 if new==1
 
 gen imputation=pib if new==0
 
+* Replicator's note: Same comment as above.
 replace imputation=pib[_n-1]+(pib[_n+4]-pib[_n-1])*.2 if new==1 & new[_n-1]==0
 replace imputation=pib[_n-2]+(pib[_n+3]-pib[_n-2])*.4 if new==1 & new[_n-2]==0
 replace imputation=pib[_n-3]+(pib[_n+2]-pib[_n-3])*.6 if new==1 & new[_n-3]==0
