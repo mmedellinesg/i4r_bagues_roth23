@@ -42,11 +42,19 @@ Otras situaciones
 (Other situations)
 */
 
+* Replicator addition - to preserve original variable before recoding
+gen militaryoriginal = militaryservice
 
+* Replicator's note - All respondents who included 1 as an option are coded as 1
 replace militaryservice="1" if substr(militaryservice,1,1)=="1"
 replace militaryservice="3" if index(militaryservice,"3")!=0
 replace militaryservice="4" if index(militaryservice,"4")!=0
 replace militaryservice="2" if index(militaryservice,"2")!=0
+
+* Replicator addition: We use a more conservative approach, where those who
+* selected 1 + another choice are dropped.
+gen militaryservice_mult1=(substr(militaryoriginal,1,2)=="1,")
+drop if militaryservice_mult1==1
 
 destring militaryservice, replace
 
