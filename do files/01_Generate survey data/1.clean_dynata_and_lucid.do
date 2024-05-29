@@ -54,7 +54,7 @@ replace militaryservice="2" if index(militaryservice,"2")!=0
 * Replicator addition: We use a more conservative approach, where those who
 * selected 1 + another choice are dropped.
 gen militaryservice_mult1=(substr(militaryoriginal,1,2)=="1,")
-drop if militaryservice_mult1==1
+*drop if militaryservice_mult1==1
 
 destring militaryservice, replace
 

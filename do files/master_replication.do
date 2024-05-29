@@ -17,7 +17,7 @@ version 14
 
 ** Adjust the following path to your own directory in which you store the folder "ReplicationFiles"
 
-global path `c(pwd)'
+global path `c(pwd)'/../
 
 
 cap log close
@@ -76,8 +76,11 @@ do "$do/AppendixFigures/FigureA7.do"
 
 do "$do/MainTables/Table1.do"
 do "$do/MainTables/Table2.do"
+do "$do/MainTables/Table2_robustness.do"
 do "$do/MainTables/Table3.do"
+do "$do/MainTables/Table3_robustness.do"
 do "$do/MainTables/Table4.do"
+do "$do/MainTables/Table4_robustness.do"
 
 ********************************************************************************
 ********************************************************************************

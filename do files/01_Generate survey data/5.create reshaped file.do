@@ -9,7 +9,7 @@ drop trust_acoruna trust_albacete trust_barcelona trust_bilbao trust_caceres tru
 
 gen id_number=_n
 
-keep id_number sentiments_* trust_* similarity_new_* year_enter_lottery province_age17 region_age17 region_lottery* region_military same_region_17_lottery yearofbirth cluster regionalidentity predictedregionalism nationalisticregion nationalisticregion2 
+keep id_number sentiments_* trust_* similarity_new_* year_enter_lottery province_age17 region_age17 region_lottery* region_military same_region_17_lottery yearofbirth cluster regionalidentity predictedregionalism nationalisticregion nationalisticregion2 militaryservice_mult1
 
 reshape long sentiments_ trust_ similarity_new_, i(id_number) j(region_number)
 
