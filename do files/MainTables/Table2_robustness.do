@@ -33,8 +33,8 @@ local Years `""$controls" "$controls if militaryservice_mult1!=1" "$controls if 
 local Years_lab  "\shortstack{Original}"  "\shortstack{Corrected}" "\shortstack{Exc. lotteries\\before 1970}" "\shortstack{Exc. lotteries\\1970-1974}" "\shortstack{Exc. lotteries\\1975-1979}" "\shortstack{Exc. lotteries\\1980-1984}" "\shortstack{Exc. lotteries\\1985-1989}"
 local Years_pat "1 1 1 1 1 1 1"
 
-local Periods `""$controls" "$controls if militaryservice_mult1!=1" "$controls if militaryservice_mult1!=1 & year_enter_lottery > 1939 & year_enter_lottery <1976" "$controls if militaryservice_mult1!=1 & year_enter_lottery > 1978 & year_enter_lottery < 1987" "$controls if militaryservice_mult1!=1 & year_enter_lottery > 1939 & year_enter_lottery <1987" "$controls if militaryservice_mult1!=1 & year_enter_lottery > 1986 & year_enter_lottery < 1992" "'
-local Periods_lab "\shortstack{Original}" "\shortstack{Corrected}" "\shortstack{Franco regime\\1940-1975}" "\shortstack{Transition\\1979-1986}" "\shortstack{Lottery years\\1940-1986}" "\shortstack{Lottery years\\1987-1991}"
+local Periods `""$controls" "$controls if militaryservice_mult1!=1" "$controls if militaryservice_mult1!=1 & year_enter_lottery > 1939 & year_enter_lottery <1976" "$controls if militaryservice_mult1!=1 & year_enter_lottery > 1978 & year_enter_lottery < 1988" "$controls if militaryservice_mult1!=1 & year_enter_lottery > 1939 & year_enter_lottery <1988" "$controls if militaryservice_mult1!=1 & year_enter_lottery > 1987 & year_enter_lottery < 1992" "'
+local Periods_lab "\shortstack{Original}" "\shortstack{Corrected}" "\shortstack{Franco regime\\1940-1975}" "\shortstack{Transition\\1979-1987}" "\shortstack{Lottery years\\1940-1987}" "\shortstack{Lottery years\\1988-1991}"
 local Periods_pat "1 1 1 1 1 1"
 
 local tests Controls Years Periods
